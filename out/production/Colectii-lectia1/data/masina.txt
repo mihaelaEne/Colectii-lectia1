@@ -1,0 +1,3 @@
+Opel,alb,100
+Ford,negru,250
+Logan,galben,1000

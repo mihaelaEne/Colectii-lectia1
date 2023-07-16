@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-public class Persoana {
+public class Persoana implements Comparable<Persoana> {
     private String nume;
     private int varsta;
     private String adresa;
@@ -40,14 +40,11 @@ public class Persoana {
 
     @Override
     public String toString() {
-        String text="";
-        text+="Sunt o persoana cu urmatoarele caracteristici:"+"\n";
-        text+="nume: "+this.nume+"\n";
-        text+="varsta: "+this.varsta+"\n";
-        text+="adresa: "+this.adresa;
-
-
-        return text;
+        return "Persoana{" +
+                "nume='" + nume + '\'' +
+                ", varsta=" + varsta +
+                ", adresa='" + adresa + '\'' +
+                '}';
     }
 
     @Override
@@ -61,5 +58,18 @@ public class Persoana {
     @Override
     public int hashCode() {
         return Objects.hash(nume, varsta, adresa);
+    }
+
+
+    @Override
+    public int compareTo(Persoana o) {
+
+        if(this.nume.compareTo(o.nume)>0){
+            return 1;
+        }else if(this.nume.compareTo(o.nume)<0){
+            return -1;
+        }else {
+            return 0;
+        }
     }
 }

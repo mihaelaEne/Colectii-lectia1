@@ -1,5 +1,14 @@
+import collectionsExample.Examples;
+import controller.MasinaController;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+//        MasinaController masinaController=new MasinaController();
+//        masinaController.load();
+//        masinaController.afisareMasina();
+
+        Examples.stergere();
+
     }
 }
