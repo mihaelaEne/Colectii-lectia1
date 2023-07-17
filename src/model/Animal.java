@@ -13,6 +13,13 @@ public class Animal implements Comparable<Animal> {
         this.nume = nume;
     }
 
+    public  Animal(String prop){
+        String [] split=prop.split(",");
+        this.id=Integer.parseInt(split[0]);
+        this.tipAnimal=split[1];
+        this.nume=split[2];
+    }
+
     public int getId() {
         return id;
     }
