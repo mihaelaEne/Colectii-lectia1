@@ -38,38 +38,33 @@ public class Persoana implements Comparable<Persoana> {
         this.adresa = adresa;
     }
 
-    @Override
-    public String toString() {
-        return "Persoana{" +
-                "nume='" + nume + '\'' +
-                ", varsta=" + varsta +
-                ", adresa='" + adresa + '\'' +
-                '}';
-    }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Persoana)) return false;
-        Persoana persoana = (Persoana) o;
-        return varsta == persoana.varsta && nume.equals(persoana.nume) && adresa.equals(persoana.adresa);
+        return nume.equals(((Persoana) o).nume);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nume, varsta, adresa);
+        return Objects.hash(nume);
     }
 
 
     @Override
     public int compareTo(Persoana o) {
 
-        if(this.nume.compareTo(o.nume)>0){
+        if (this.nume.compareTo(o.nume) > 0) {
             return 1;
-        }else if(this.nume.compareTo(o.nume)<0){
+        } else if (this.nume.compareTo(o.nume) < 0) {
             return -1;
-        }else {
+        } else {
             return 0;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Eu sunt " + this.nume + ", am " + this.varsta +" de ani "+ "si locuiesc in: " + this.adresa;
+
     }
 }

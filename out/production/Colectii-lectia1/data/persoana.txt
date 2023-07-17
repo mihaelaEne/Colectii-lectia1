@@ -1,0 +1,3 @@
+Mihaela,21,Bucuresti
+Denisa,22,Cluj
+Andrei,23,Sibiu

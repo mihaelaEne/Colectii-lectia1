@@ -1,3 +1,4 @@
+import collectionsExample.ExCoada;
 import collectionsExample.Examples;
 import controller.MasinaController;
 
@@ -8,7 +9,9 @@ public class Main {
 //        masinaController.load();
 //        masinaController.afisareMasina();
 
-        Examples.stergere();
+        //Examples.stergere();
+
+        ExCoada.ex();
 
     }
 }

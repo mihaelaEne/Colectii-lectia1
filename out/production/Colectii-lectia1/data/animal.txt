@@ -1,0 +1,4 @@
+1,maimuta,maimutica
+2,caine,ares
+3,pisica,rose
+4,papagal,papagalNume
