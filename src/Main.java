@@ -1,5 +1,6 @@
-import collectionsExample.ExCoada;
+
 import collectionsExample.Examples;
+
 import controller.MasinaController;
 
 public class Main {
@@ -8,10 +9,13 @@ public class Main {
 //        MasinaController masinaController=new MasinaController();
 //        masinaController.load();
 //        masinaController.afisareMasina();
-
         //Examples.stergere();
+        // ExCoada.exMasini();
 
-        ExCoada.ex();
+
+
 
     }
+
+
 }

@@ -5,15 +5,12 @@ import model.Liceu;
 import model.Masina;
 import model.Persoana;
 
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public abstract class Examples {
 
 
-    public static void explAfisare() {
+    public static void explAfisareList() {
 
         List<Persoana> persoane = new ArrayList<>();
 
@@ -95,7 +92,7 @@ public abstract class Examples {
 
     }
 
-    public static void stergere() {
+    public static void stergereList() {
         List<Persoana> persoane = new ArrayList<>();
 
         Persoana p1 = new Persoana("Maria", 20, "Bucuresti");
@@ -196,4 +193,71 @@ public abstract class Examples {
 
         System.out.println(animals);
     }
+
+    public static  void exCoadaPersoane(){
+        Queue<Persoana> persoane=new ArrayDeque<>();
+        Persoana p1 = new Persoana("Maria", 20, "Bucuresti");
+        persoane.add(p1);
+        Persoana p2 = new Persoana("Ion", 15, "Arad");
+        persoane.add(p2);
+        Persoana p3 = new Persoana("Ana", 21, "Sibiu");
+        persoane.add(p3);
+        Persoana p4 = new Persoana("Denisa", 22, "Cluj");
+        persoane.add(p4);
+
+        System.out.println(persoane.element());
+        persoane.remove();
+        System.out.println(persoane.element());
+
+    }
+
+    public static void exMasini(){
+        Queue<Masina> masini=new ArrayDeque<>();
+        Masina m1=new Masina("Civic","rosu",100);
+        masini.add(m1);
+        Masina m2=new Masina("Clio","negru",200);
+        masini.add(m2);
+        Masina m3=new Masina("Tucson","albastru",300);
+        masini.add(m3);
+
+//        System.out.println(masini.element());
+//        masini.remove();
+//        System.out.println(masini.element());
+//        masini.remove();
+//        System.out.println(masini.element());
+
+
+        while(!masini.isEmpty()){
+            System.out.println(masini.remove());
+        }
+
+    }
+
+    public static void sirInversatCoada() {
+        Queue<Character> sirCaractere = new ArrayDeque<>();
+
+        String text = "ana are mere";
+
+        for (int i = text.length()-1; i >= 0; i--) {
+            sirCaractere.add(text.charAt(i));
+        }
+
+        String aux="";
+
+        while (!sirCaractere.isEmpty()){
+
+            aux+=sirCaractere.element();
+            sirCaractere.remove();
+        }
+
+
+        System.out.println(aux);
+
+
+
+    }
+
+
+    
+
 }
