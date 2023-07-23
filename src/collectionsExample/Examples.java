@@ -258,6 +258,61 @@ public abstract class Examples {
     }
 
 
-    
+    public static void exStackPersoane() {
+        Deque<Persoana> persoane = new ArrayDeque<>();
+
+        Persoana p1 = new Persoana("Daniela", 15, "Iasi");
+        persoane.push(p1);
+        Persoana p2 = new Persoana("Maria", 20, "Sibiu");
+        persoane.push(p2);
+        Persoana p3 = new Persoana("Daniel", 30, "Bucuresti");
+        persoane.push(p3);
+
+//        System.out.println(persoane.element());
+//        persoane.pop();
+//        System.out.println(persoane.element());
+
+        while (!persoane.isEmpty()){
+            System.out.println(persoane.pop());
+        }
+    }
+
+
+    //todo:primim un text cu ()[]{} si trebuie sa verificam daca textul este corect balantat
+    // todo:((ASdasdas))[()]][
+
+
+    public static void exTextBalansatStack(String textDeVerificat){
+        Deque<Character> textBalansat=new ArrayDeque<>();
+
+
+        for(char verificare:textDeVerificat.toCharArray()){
+            if(verificare=='('|| verificare=='['||verificare=='{'){
+                textBalansat.push(verificare);
+            }else if(verificare==')'||verificare==']'||verificare=='}'){
+                switch ( verificare){
+                    case ')':
+                        if(!textBalansat.isEmpty()){
+
+                            
+                        }
+                    case ']':
+                        if(!textBalansat.isEmpty()){
+
+                        }
+                    case '}':
+                        if(!textBalansat.isEmpty()){
+
+                        }
+
+                }
+
+            }else{
+                System.out.println("Textul nu este balansat");
+            }
+        }
+
+    }
+
 
 }

@@ -12,7 +12,8 @@ public class Main {
         //Examples.stergere();
         // ExCoada.exMasini();
 
-
+       // Examples.exStackPersoane();
+        Examples.exTextBalansatStack("(ss)");
 
 
     }
