@@ -13,7 +13,9 @@ public class Main {
         // ExCoada.exMasini();
 
        // Examples.exStackPersoane();
-        Examples.exTextBalansatStack("(ss)");
+
+
+        Examples.afisareMasina();
 
 
     }

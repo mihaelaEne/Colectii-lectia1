@@ -62,6 +62,7 @@ public class Persoana implements Comparable<Persoana> {
         }
     }
 
+
     @Override
     public String toString() {
         return "Eu sunt " + this.nume + ", am " + this.varsta +" de ani "+ "si locuiesc in: " + this.adresa;

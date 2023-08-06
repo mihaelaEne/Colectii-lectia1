@@ -5,12 +5,12 @@ import java.util.Objects;
 public class Liceu implements Comparable<Liceu> {
 
     private String numeLiceu;
-    private String Oras;
+    private String oras;
     private int nrStudenti;
 
     public Liceu(String numeLiceu, String oras, int nrStudenti) {
         this.numeLiceu = numeLiceu;
-        Oras = oras;
+        this.oras = oras;
         this.nrStudenti = nrStudenti;
     }
 
@@ -23,11 +23,11 @@ public class Liceu implements Comparable<Liceu> {
     }
 
     public String getOras() {
-        return Oras;
+        return oras;
     }
 
     public void setOras(String oras) {
-        Oras = oras;
+        this.oras = oras;
     }
 
     public int getNrStudenti() {
@@ -42,22 +42,20 @@ public class Liceu implements Comparable<Liceu> {
     public String toString() {
         return "Liceu{" +
                 "numeLiceu='" + numeLiceu + '\'' +
-                ", Oras='" + Oras + '\'' +
+                ", Oras='" + oras + '\'' +
                 ", nrStudenti=" + nrStudenti +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Liceu)) return false;
-        Liceu liceu = (Liceu) o;
-        return nrStudenti == liceu.nrStudenti && numeLiceu.equals(liceu.numeLiceu) && Oras.equals(liceu.Oras);
+        Liceu liceu=(Liceu) o;
+        return  this.numeLiceu.equals(liceu.numeLiceu)&&this.oras.equals(liceu.oras);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numeLiceu, Oras, nrStudenti);
+        return Objects.hash(numeLiceu, oras, nrStudenti);
     }
 
     @Override

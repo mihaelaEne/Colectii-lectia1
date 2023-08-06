@@ -7,6 +7,11 @@ public class Animal implements Comparable<Animal> {
     private String tipAnimal;
     private String nume;
 
+
+    public Animal (String tipAnimal,String nume){
+        this.tipAnimal=tipAnimal;
+        this.nume=nume;
+    }
     public Animal(int id, String tipAnimal, String nume) {
         this.id = id;
         this.tipAnimal = tipAnimal;
