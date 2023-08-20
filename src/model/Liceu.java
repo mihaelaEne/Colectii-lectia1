@@ -1,9 +1,11 @@
 package model;
 
+import java.util.List;
 import java.util.Objects;
 
-public class Liceu implements Comparable<Liceu> {
+public class Liceu implements Comparable<Liceu>, LiceuBuilder {
 
+    public Liceu(){}
     private String numeLiceu;
     private String oras;
     private int nrStudenti;
@@ -68,4 +70,24 @@ public class Liceu implements Comparable<Liceu> {
             return 0;
         }
     }
+
+    @Override
+    public Liceu numeLiceu(String numeLiceu) {
+        this.numeLiceu=numeLiceu;
+        return this;
+    }
+
+    @Override
+    public Liceu oras(String numeOras) {
+        this.oras=oras;
+        return this;
+    }
+
+    @Override
+    public Liceu nrStudenti(int nrStudenti) {
+       this.nrStudenti=nrStudenti;
+       return this;
+    }
+
+
 }

@@ -1,5 +1,6 @@
 import controller.MasinaController;
 import model.Masina;
+import model.MasinaBuilder;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -94,6 +95,7 @@ public class MasinaControllerTest {
 
 
     }
+
 
 
 
