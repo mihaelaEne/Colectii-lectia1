@@ -2,12 +2,15 @@ package model;
 
 import java.util.Objects;
 
-public class Masina implements  Comparable<Masina> {
+public class Masina implements  Comparable<Masina> ,MasinaBuilder {
 
     private String model;
     private String culoare;
     private  int km;
 
+    public  Masina(){
+
+    }
     public Masina(String model, String culoare, int km) {
         this.model = model;
         this.culoare = culoare;
@@ -37,6 +40,8 @@ public class Masina implements  Comparable<Masina> {
     public void setKm(int km) {
         this.km = km;
     }
+
+
 
     @Override
     public String toString() {
@@ -80,4 +85,26 @@ public class Masina implements  Comparable<Masina> {
         }
 
     }
+
+    @Override
+    public Masina model(String model) {
+
+        this.model=model;
+        return this;
+    }
+
+    @Override
+    public Masina culoare(String culoare) {
+        this.culoare=culoare;
+        return this;
+    }
+
+    @Override
+    public Masina km(int km) {
+        this.km=km;
+        return this;
+    }
+
+
+
 }

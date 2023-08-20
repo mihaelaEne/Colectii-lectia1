@@ -2,12 +2,12 @@ package model;
 
 import java.util.Objects;
 
-public class Animal implements Comparable<Animal> {
+public class Animal implements Comparable<Animal>, AnimalBuilder {
     private int id;
     private String tipAnimal;
     private String nume;
 
-
+public Animal(){}
     public Animal (String tipAnimal,String nume){
         this.tipAnimal=tipAnimal;
         this.nume=nume;
@@ -81,5 +81,27 @@ public class Animal implements Comparable<Animal> {
         } else {
             return 0;
         }
+    }
+
+    @Override
+    public Animal id(int id) {
+        this.id=id;
+        return this;
+    }
+
+    @Override
+    public Animal tipAnimal(String tipAnimal) {
+       this.tipAnimal=tipAnimal;
+       return this;
+    }
+
+    @Override
+    public Animal nume(String nume) {
+        this.nume=nume;
+        return this;
+    }
+
+    public static Animal build(){
+        return new Animal();
     }
 }

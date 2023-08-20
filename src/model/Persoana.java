@@ -2,12 +2,14 @@ package model;
 
 import java.util.Objects;
 
-public class Persoana implements Comparable<Persoana> {
+public class Persoana implements Comparable<Persoana>, PersoanaBuilder {
+
     private String nume;
     private int varsta;
     private String adresa;
 
 
+    public Persoana (){}
     public Persoana(String nume, int varsta, String adresa) {
         this.nume = nume;
         this.varsta = varsta;
@@ -67,5 +69,31 @@ public class Persoana implements Comparable<Persoana> {
     public String toString() {
         return "Eu sunt " + this.nume + ", am " + this.varsta +" de ani "+ "si locuiesc in: " + this.adresa;
 
+    }
+
+    @Override
+    public Persoana nume(String nume) {
+
+        this.nume=nume;
+
+        return this ;
+    }
+
+    @Override
+    public Persoana varsta(int varsta) {
+        this.varsta=varsta;
+        return this;
+    }
+
+    @Override
+    public Persoana adresa(String adresa) {
+
+       this.adresa=adresa;
+       return this;
+    }
+
+
+    public static Persoana build() {
+        return new Persoana();
     }
 }
